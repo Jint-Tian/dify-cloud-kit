@@ -127,6 +127,8 @@ func normalizeSignatureVersion(version string) string {
 	switch strings.ToLower(version) {
 	case "unsigned":
 		return ""
+	case "":
+		return "v4"  // 默认使用 v4
 	default:
 		return version
 	}
